@@ -15,8 +15,6 @@ def execute(code: str):
     except Exception as e:
         st.exception(e)
 
-st.write(st.experimental_user["email"])
-
 if st.experimental_user["email"] in st.secrets["authorized_users"]:
     python = st_ace(
         value=st.session_state["python"],
