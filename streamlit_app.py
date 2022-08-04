@@ -15,7 +15,9 @@ def execute(code: str):
     except Exception as e:
         st.exception(e)
 
-if st.experimental_user["email"] in st.secrets["authorized_users"]:
+edit_pw = st.experimental_get_query_params().get("edit_password", [""])[0]
+
+if edit_pw == st.secrets["edit_password"]:
     python = st_ace(
         value=st.session_state["python"],
         key="python",

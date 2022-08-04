@@ -66,7 +66,7 @@ def get_short_url_button():
 
 def expand_short_url():
     query_params = st.experimental_get_query_params()
-    if set(query_params.keys()) == {"q"}:
+    if "q" in query_params:
         short_hash = query_params["q"][0]
         try:
             python = get_python_from_hash(short_hash)
