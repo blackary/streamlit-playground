@@ -38,8 +38,10 @@ def is_hash_in_table(hash: str) -> bool:
     return len(row) > 0
 
 
-def save_hash_if_not_exists() -> str:
-    hash = get_hash_from_python()
+def save_hash_if_not_exists(hash: str = None) -> str:
+    if hash is None:
+        hash = get_hash_from_python()
+
     if not is_hash_in_table(hash):
         python = get_python()
         insert_row({"hash": hash, "python": python}, TABLE)
@@ -51,8 +53,13 @@ def get_short_url_from_hash(hash: str) -> str:
 
 
 def get_short_url_button():
+    custom_hash = st.text_input("Custom Hash")
     if st.button("Get shareable url"):
-        hash = save_hash_if_not_exists()
+        if custom_hash is not None:
+            hash = custom_hash
+        else:
+            hash = get_hash_from_python()
+        save_hash_if_not_exists(hash)
         url = get_short_url_from_hash(hash)
         st.write(url)
 
