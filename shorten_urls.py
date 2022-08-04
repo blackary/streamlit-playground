@@ -53,9 +53,9 @@ def get_short_url_from_hash(hash: str) -> str:
 
 
 def get_short_url_button():
-    custom_hash = st.text_input("Custom Hash")
+    custom_hash = st.text_input("Custom Hash").strip()
     if st.button("Get shareable url"):
-        if custom_hash is not None:
+        if custom_hash:
             hash = custom_hash
         else:
             hash = get_hash_from_python()
