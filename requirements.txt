@@ -4,3 +4,4 @@ matplotlib
 supabase
 streamlit-ace
 yfinance
+plotly
