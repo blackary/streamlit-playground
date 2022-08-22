@@ -11,7 +11,7 @@ if "python" not in st.session_state:
 
 def execute(code: str):
     try:
-        exec(code)
+        exec(code, globals(), globals())
     except Exception as e:
         st.exception(e)
 
