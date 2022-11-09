@@ -1,9 +1,7 @@
 import hashlib
-import json
-from typing import Any, Dict, Optional
+from typing import Optional
 from urllib import parse
 
-import pandas as pd
 import streamlit as st
 
 from db import insert_row, select_where
