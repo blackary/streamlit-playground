@@ -1,6 +1,6 @@
 import hashlib
 import json
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 from urllib import parse
 
 import pandas as pd
@@ -38,7 +38,7 @@ def is_hash_in_table(hash: str) -> bool:
     return len(row) > 0
 
 
-def save_hash_if_not_exists(hash: str = None) -> str:
+def save_hash_if_not_exists(hash: Optional[str] = None) -> str:
     if hash is None:
         hash = get_hash_from_python()
 

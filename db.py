@@ -1,7 +1,7 @@
-from typing import Any, Iterable, Tuple
+from typing import Any
 
 import streamlit as st
-from supabase import Client, create_client
+from supabase.client import Client, create_client
 
 key: str = st.secrets["db_api_key"]
 url: str = st.secrets["db_url"]

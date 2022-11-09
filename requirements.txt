@@ -1,7 +1,9 @@
-streamlit>=1.12.2
+streamlit>=1.14.0
 pandas
 matplotlib
 supabase
 streamlit-ace
 yfinance
 plotly
+streamlit-faker
+streamlit-extras

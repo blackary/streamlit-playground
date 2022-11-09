@@ -15,6 +15,7 @@ def execute(code: str):
     except Exception as e:
         st.exception(e)
 
+
 edit_pw = st.experimental_get_query_params().get("edit_password", [""])[0]
 
 if edit_pw == st.secrets["edit_password"]:
