@@ -1,7 +1,12 @@
+import sys
+
 import streamlit as st
 from streamlit_ace import st_ace
 
 from shorten_urls import expand_short_url, get_short_url_button
+
+streamlit_version = st.__version__
+python_version = sys.version
 
 expand_short_url()
 
@@ -30,5 +35,14 @@ if edit_pw == st.secrets["edit_password"]:
 else:
     st.expander("Show code").code(st.session_state["python"])
 
+st.expander("Show environment details").write(
+    f"""
+- Python version: {python_version}
+- Streamlit version: {streamlit_version}
+"""
+)
 
+execute(st.session_state["python"])
+
+execute(st.session_state["python"])
 execute(st.session_state["python"])
