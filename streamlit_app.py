@@ -43,6 +43,3 @@ st.expander("Show environment details").write(
 )
 
 execute(st.session_state["python"])
-
-execute(st.session_state["python"])
-execute(st.session_state["python"])
