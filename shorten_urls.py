@@ -1,4 +1,5 @@
 import hashlib
+from textwrap import dedent
 from typing import Optional
 from urllib import parse
 
@@ -50,6 +51,19 @@ def get_short_url_from_hash(hash: str) -> str:
     return BASE_URL + "?" + parse.urlencode({"q": hash})
 
 
+def get_embed_code_from_hash(hash: str):
+    return dedent(
+        f"""
+    <iframe
+        width="100%"
+        height="500px"
+        frameBorder="0"
+        src="https://playground.streamlit.app/~/+/?embed=true&q={hash}">
+    </iframe>
+    """
+    )
+
+
 def get_short_url_button():
     custom_hash = st.text_input("Custom Hash").strip()
     if st.button("Get shareable url"):
@@ -59,7 +73,10 @@ def get_short_url_button():
             hash = get_hash_from_python()
         save_hash_if_not_exists(hash)
         url = get_short_url_from_hash(hash)
+        embed_code = get_embed_code_from_hash(hash)
         st.write(url)
+        with st.expander("Show embed code"):
+            st.code(embed_code, language="html")
 
 
 def expand_short_url():
