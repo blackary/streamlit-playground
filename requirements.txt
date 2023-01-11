@@ -7,3 +7,4 @@ yfinance
 plotly
 streamlit-faker
 streamlit-extras>=0.2.4
+loguru
