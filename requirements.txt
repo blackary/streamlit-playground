@@ -6,5 +6,5 @@ streamlit-ace
 yfinance
 plotly
 streamlit-faker
-streamlit-extras>=0.2.4
+streamlit-extras>=0.2.5
 loguru
