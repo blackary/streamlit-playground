@@ -58,7 +58,7 @@ def get_embed_code_from_hash(hash: str):
         width="100%"
         height="500px"
         frameBorder="0"
-        src="https://playground.streamlit.app/~/+/?embed=true&q={hash}">
+        src="https://playground.streamlit.app/~/+/?embedded=true&q={hash}">
     </iframe>
     """
     )
