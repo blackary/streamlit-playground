@@ -9,3 +9,5 @@ streamlit-faker
 streamlit-extras>=0.2.5
 loguru
 streamlit-chat
+pyvibe
+streamlit-lightweight-charts
