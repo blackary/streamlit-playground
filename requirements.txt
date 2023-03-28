@@ -11,3 +11,4 @@ loguru
 streamlit-chat
 pyvibe
 streamlit-lightweight-charts
+streamlit-url-fragment
