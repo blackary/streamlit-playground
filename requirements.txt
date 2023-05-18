@@ -12,3 +12,4 @@ streamlit-chat
 pyvibe
 streamlit-lightweight-charts
 streamlit-url-fragment
+streamlit_js_eval
