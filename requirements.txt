@@ -6,7 +6,7 @@ streamlit-ace
 yfinance
 plotly
 streamlit-faker
-streamlit-extras>=0.2.5
+streamlit-extras>=0.3.0
 loguru
 streamlit-chat
 pyvibe
